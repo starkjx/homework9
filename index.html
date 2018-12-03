@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>my homework9</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul{
+                list-style: none;
+            }
+            ul>li{
+                width: 80px;
+            }
+            nav{
+                width: 500px;
+                margin: 10px auto;
+                box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+            }
+            a{
+                color: #333;
+                text-decoration: none;
+            }
+            nav>ul>li{
+                float: left;
+                position: relative;
+            }
+            nav>ul>li:hover .child{
+                display: block;
+            }
+            nav::after{
+                content: ' ';
+                display: block;
+                clear: both;
+            }
+            nav a{
+                display: block;
+                padding: 15px;
+            }
+            nav a:hover{
+                color: #fff;
+                background: rgba(0, 0, 0, 0.4);
+            }
+            nav .child{
+                position: absolute;
+                top: 100%;
+                box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+                display: none;
+            }
+            .box{
+                width: 600px;
+                margin: 0 auto;
+                margin-top: 200px;
+            }
+            .box>div{
+                margin-top: 30px;
+            }
+            .message{
+                color: #fff;
+                padding:1px 20px;
+                line-height: 1.5;
+                border-radius: 4px;
+            }
+            .message .close{
+                text-decoration: none;
+                float: right;
+                font-size: 16px;
+                font-weight: bold;
+                color: inherit;
+                cursor: pointer;
+            }
+            .message>h3{
+                font-size: 24px;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            .message.congratulation{
+                background-color: #4caf50;
+            }
+            .message.info{
+                background-color: #2196f3;
+            }
+            .message.danger{
+                background-color: #f44336;
+            }
+            .message.warning{
+                background-color: #ff9800;
+            }
+            .message p{
+                margin: 16px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">作品</a></li>
+                <li>
+                    <a href="#">更多</a>
+                    <ul class="child">
+                        <li><a href="#">Git</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">知乎</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </nav>
+        <div class="box">
+            <div class="message congratulation">
+                <span class="close">x</span>
+                <h3>恭喜你</h3>
+                <p>获得本周学霸，继续加油吧</p>
+            </div>
+            <div class="message info">
+                <span class="close">x</span>
+                <h3>通知</h3>
+                <p>晚上上课，不要忘了</p>
+            </div>
+            <div class="message danger">
+                <span class="close">x</span>
+                <h3>天啊</h3>
+                <p>竟然几天没做任务</p>
+            </div>
+            <div class="message warning">
+                <span class="close">x</span>
+                <h3>警告</h3>
+                <p>学如逆水行舟，不进则退</p>
+            </div>
+        </div>
+    </body>
+</html>
